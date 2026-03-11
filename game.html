@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tic Tac Toe Game</title>
+<link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+<h1>🎮 Tic-Tac-Toe Game</h1>
+
+<div class="mode-select">
+    <button onclick="startGame('pvp')">Player vs Player</button>
+    <button onclick="startGame('cpu')">Player vs Computer</button>
+</div>
+
+<p id="modeMessage"></p>
+
+<div class="container">
+
+<!-- Instructions -->
+<div class="side left">
+<h2>Instructions</h2>
+<ul>
+<li>Select game mode</li>
+<li>Players take turns</li>
+<li>Match 3 symbols to win</li>
+<li>Row, Column or Diagonal</li>
+</ul>
+</div>
+
+<!-- Game Board -->
+<div class="game">
+<div id="board"></div>
+</div>
+
+<!-- How to Play -->
+<div class="side right">
+<h2>How To Play</h2>
+<ul>
+<li>Click empty box</li>
+<li>X plays first</li>
+<li>Plan your moves</li>
+<li>Block opponent!</li>
+</ul>
+</div>
+
+</div>
+
+<!-- Winner Popup -->
+<div id="winnerPopup">
+<h2 id="winnerText"></h2>
+<button onclick="resetGame()">Play Again</button>
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script src="game.js"></script>
+</body>
+</html>
